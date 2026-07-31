@@ -1,0 +1,51 @@
+// ScreenReaderOverlay — A7 Accessibility Styles
+// Visually hidden but fully accessible to screen readers
+
+.sr-overlay {
+    // Overlay sits on top of canvas but is invisible
+    position: fixed;
+    inset: 0;
+    z-index: 1; // Below all UI (z-index: 100) but above nothing visible
+    pointer-events: none;
+
+    // All interactive elements need pointer-events
+    button, a {
+        pointer-events: auto;
+    }
+}
+
+// Visually hidden — accessible to SR only
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+// Focusable skip link — becomes visible on focus
+.sr-focusable:focus {
+    position: fixed !important;
+    top: 8px;
+    left: 8px;
+    width: auto !important;
+    height: auto !important;
+    padding: 12px 20px !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+    z-index: 10000;
+    background: #1a1a1a;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}

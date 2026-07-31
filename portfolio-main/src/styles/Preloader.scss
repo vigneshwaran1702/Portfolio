@@ -1,0 +1,70 @@
+// =============================================================================
+// PRELOADER STYLES - Paper Tear Edition
+// =============================================================================
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.preloader {
+    @include fullscreen;
+    z-index: $z-preloader;
+    // No background on container itself, the halves handle it
+    pointer-events: auto;
+    cursor: auto;
+
+    &__half {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%; // Each half takes full width but is clipped
+        height: 100%;
+        background-color: $color-white;
+        background-image: url('/textures/paper-texture.webp');
+        background-size: cover;
+        background-position: center;
+        // background-blend-mode: multiply; // Optional depending on look
+
+        will-change: transform; // Optimize for the big move
+
+        // Shadow to give depth to the tear? 
+        // Hard to do with clip-path on the element itself.
+        // We'd need an inner wrapper or drop-shadow filter (heavy).
+        // Let's keep it flat for now or maybe add a slight filter.
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+    }
+
+    &__half--left {
+        left: 0;
+        // clip-path set inline
+    }
+
+    &__half--right {
+        right: 0;
+        // clip-path set inline
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        pointer-events: none;
+
+        // Depending on implementation, SVG might need to scale differently
+        // We used preserveAspectRatio="none" in JSX to stretch it to viewport
+    }
+
+    &__percentage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: $font-handwritten; // Or title font
+        font-size: 2rem;
+        color: $color-black; // Or opacity
+        z-index: 20;
+        mix-blend-mode: multiply; // Make it look written on paper
+    }
+}
