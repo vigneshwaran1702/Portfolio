@@ -7,23 +7,23 @@ gsap.registerPlugin(ScrollTrigger);
 const pillars = [
   {
     num: "01",
-    title: "Performance Development",
-    desc: "Writing semantic, responsive, and blazing-fast code. Blending frontend React architectures with optimized custom backend WordPress templates."
+    title: "AI & Data Products",
+    desc: "Building intelligent, responsive web experiences that combine modern frontend engineering with analytics-driven product thinking."
   },
   {
     num: "02",
-    title: "Organic SEO & Auditing",
-    desc: "Optimizing layout hierarchies, configuring Schema metadata, index pipelines, and monitoring Google Search Console to scale search traffic."
+    title: "Problem Solving",
+    desc: "Turning ideas into practical solutions through experimentation, rapid prototyping, and thoughtful product design."
   },
   {
     num: "03",
-    title: "Digital Products",
-    desc: "Engineering lightweight web tools and content databases (like pin savers, habit journals) that solve problems for target audiences."
+    title: "Web Development",
+    desc: "Creating polished digital experiences with React, Python, and cloud-ready architectures for today’s product teams."
   },
   {
     num: "04",
-    title: "Monetized Ecosystems",
-    desc: "Building platforms with integrated AdSense, Cloudflare setups, and optimized server configurations to turn web traffic into active revenue."
+    title: "Learning & Growth",
+    desc: "Continuously exploring new tools and systems to deliver better results through collaboration, curiosity, and execution."
   }
 ];
 

@@ -301,11 +301,11 @@ const Preloader = ({ onComplete, ready }) => {
 
         let statusMsg = "Initializing Sketchbook...";
         if (safeProgress < 25) statusMsg = "Sketching Digital Canvas...";
-        else if (safeProgress < 50) statusMsg = "Laying WordPress Foundation...";
-        else if (safeProgress < 70) statusMsg = "Calibrating Video Renders...";
-        else if (safeProgress < 85) statusMsg = "Structuring AdSense Expert System...";
-        else if (safeProgress < 95) statusMsg = "Optimizing SEO & Blogging Data...";
-        else statusMsg = "Opening Sketchbook Portal...";
+        else if (safeProgress < 50) statusMsg = "Building AI & Data Layers...";
+        else if (safeProgress < 70) statusMsg = "Preparing Web Interfaces...";
+        else if (safeProgress < 85) statusMsg = "Connecting Product Ideas...";
+        else if (safeProgress < 95) statusMsg = "Polishing Portfolio Experience...";
+        else statusMsg = "Opening Portfolio Portal...";
 
         if (statusLeftRef.current) statusLeftRef.current.innerText = statusMsg;
         if (statusRightRef.current) statusRightRef.current.innerText = statusMsg;

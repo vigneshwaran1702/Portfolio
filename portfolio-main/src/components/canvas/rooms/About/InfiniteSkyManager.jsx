@@ -352,7 +352,7 @@ const IntroMilestone = ({ z, scrollProgressRef }) => {
                 anchorY="middle"
                 font="/fonts/RubikScribble-Regular.ttf"
             >
-                TOMASZ SZMAJDA
+                VIGNESH
             </Text>
 
             {/* Subtitle - Brand (spreads right) */}
@@ -365,7 +365,7 @@ const IntroMilestone = ({ z, scrollProgressRef }) => {
                 anchorY="middle"
                 font="/fonts/CabinSketch-Regular.ttf"
             >
-                (ITOM)
+                (AI • DATA • WEB)
             </Text>
 
             {/* Avatar on cloud - floating + spreads up-left */}
@@ -449,12 +449,12 @@ const AWARDS_DATA = {
     sotm: {
         id: 'award-sotm',
         layout: 'certificate_grid',
-        title: 'Blogging & SEO Expertise',
+        title: 'Hackathons & Growth',
         items: [
-            { label: 'Organic Search Optimization', date: '2026', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Google AdSense Integration', date: '2025', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Blogging & Audience Growth', date: '2026', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Canva Content Creation', date: 'Active', image: '/textures/about/button.webp', url: '#' }
+            { label: 'Hackathon Participation', date: '2026', image: '/textures/about/button.webp', url: '#' },
+            { label: 'Problem Solving', date: '2025', image: '/textures/about/button.webp', url: '#' },
+            { label: 'Team Collaboration', date: '2026', image: '/textures/about/button.webp', url: '#' },
+            { label: 'Rapid Prototyping', date: 'Active', image: '/textures/about/button.webp', url: '#' }
         ],
         platformConfig: {
             label: 'EXPERT',
@@ -743,7 +743,7 @@ const AwardsMilestone = ({ z, scrollProgressRef }) => {
                     anchorY="middle"
                     font="/fonts/CabinSketch-Bold.ttf"
                 >
-                    SEO & BLOG
+                    HACKATHONS
                 </Text>
                 {/* CAPACITY SUBTITLE */}
                 <Text
@@ -754,7 +754,7 @@ const AwardsMilestone = ({ z, scrollProgressRef }) => {
                     anchorY="middle"
                     font="/fonts/CabinSketch-Regular.ttf"
                 >
-                    AdSense & Growth
+                    Build & Learn Fast
                 </Text>
             </group>
 
@@ -940,13 +940,13 @@ const JourneyMilestone = ({ z, scrollProgressRef }) => {
                 {/* NAPIS NA WYSPIE (UO) - EDYTUJ TUTAJ */}
                 <Text
                     position={[0.1, -0.85, 0.1]} // POZYCJA (X, Y, Z)
-                    fontSize={0.4}           // WIELKOŚĆ
+                    fontSize={0.35}           // WIELKOŚĆ
                     color="#1a1a1a"
                     anchorX="center"
                     anchorY="middle"
                     font="/fonts/CabinSketch-Bold.ttf"
                 >
-                    2025-NOW
+                    INTERNSHIP
                 </Text>
             </group>
 
@@ -963,13 +963,13 @@ const JourneyMilestone = ({ z, scrollProgressRef }) => {
                 {/* NAPIS NA WYSPIE (Freelance) - EDYTUJ TUTAJ */}
                 <Text
                     position={[0, -0.65, 0.1]} // POZYCJA (X, Y, Z)
-                    fontSize={0.5}           // WIELKOŚĆ
+                    fontSize={0.4}           // WIELKOŚĆ
                     color="#1a1a1a"
                     anchorX="center"
                     anchorY="middle"
                     font="/fonts/CabinSketch-Bold.ttf"
                 >
-                    2023-NOW
+                    PROJECTS
                 </Text>
             </group>
         </group>

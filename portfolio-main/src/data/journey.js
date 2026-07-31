@@ -7,9 +7,9 @@ export const journeyData = [
   },
   {
     phase: "EXPERIENCE",
-    title: "AI & Data Analytics Internships",
-    period: "Internship",
-    description: "Gained hands-on experience through internships in AI, machine learning, and analytics at Aspire Code AI, Arul’s Technologies, and Novi Tech."
+    title: "Internships & Hackathons",
+    period: "Internships",
+    description: "Gained hands-on experience through internships in AI, machine learning, and analytics while also participating in hackathons to build practical solutions."
   },
   {
     phase: "CERTIFICATION",
