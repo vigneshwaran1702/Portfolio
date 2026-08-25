@@ -36,49 +36,49 @@ export const GALLERY_INTERACTION_AUDIO_SETTINGS = {
 // Define the unique projects and their textures
 const FALLBACK_PROJECTS = [
     {
+        id: 'cloudsecurity',
+        title: 'CLOUD SECURITY SCANNER',
+        front: '/textures/gallery/timberkittyprzod.webp',
+        painted: '/textures/gallery/timberkittyprzod_painted.webp',
+        url: 'https://ai-cloud-security.vercel.app',
+        description: 'An automated cloud security scanner that detects misconfigurations, vulnerabilities, and compliance risks across AWS, Azure, and GCP.',
+        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/tailwindlogo.webp', '/textures/gallery/jslogo.webp']
+    },
+    {
+        id: 'wildlifenews',
+        title: 'WILDLIFE NEWS',
+        front: '/textures/gallery/monetuneprzod.webp',
+        painted: '/textures/gallery/monetuneprzod_painted.webp',
+        url: 'https://tnwildlife-news.vercel.app/',
+        description: 'A Tamil Nadu Wildlife & Forest News Aggregator with AI news categorization, conflict severity scoring, and automated PDF digests.',
+        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
+    },
+    {
+        id: 'attendancemonitor',
+        title: 'ATTENDANCE MONITOR',
+        front: '/textures/gallery/bioprzod.webp',
+        painted: '/textures/gallery/bioprzod_painted.webp',
+        url: 'https://attendance-monitor-alpha.vercel.app/',
+        description: 'An automated attendance monitoring system with biometric fingerprint tracking, working hours calculation, and report generation.',
+        techStack: ['/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
+    },
+    {
+        id: 'redballgame',
+        title: 'RED BALL GAME',
+        front: '/textures/gallery/youngmultiprzod.webp',
+        painted: '/textures/gallery/youngmultiprzod_painted.webp',
+        url: 'https://red-ball-game.vercel.app',
+        description: 'An interactive physics-based 2D platformer ball game featuring custom physics, mechanics, obstacle navigation, and responsive controls.',
+        techStack: ['/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
+    },
+    {
         id: 'medai',
         title: 'MED AI',
         front: '/textures/gallery/timberkittyprzod.webp',
         painted: '/textures/gallery/timberkittyprzod_painted.webp',
-        url: '#',
-        description: 'An AI-powered healthcare chatbot developed using Large Language Models (LLMs), NLP, FastAPI, and Supabase.',
+        url: 'https://med-ai.vercel.app',
+        description: 'An AI-powered healthcare assistant that simplifies medical understanding through conversational interactions, prescription analysis, and document support.',
         techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'twinauth',
-        title: 'TWIN AUTHENTICATION',
-        front: '/textures/gallery/monetuneprzod.webp',
-        painted: '/textures/gallery/monetuneprzod_painted.webp',
-        url: '#',
-        description: 'A secure e-voting system using dual biometric authentication (fingerprint & iris) to prevent impersonation.',
-        techStack: ['/textures/gallery/wordpresslogo.webp', '/textures/gallery/phplogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'defenceradar',
-        title: 'DEFENCE RADAR-IOT',
-        front: '/textures/gallery/bioprzod.webp',
-        painted: '/textures/gallery/bioprzod_painted.webp',
-        url: '#',
-        description: 'A smart surveillance system using Arduino, ultrasonic sensors, and IoT modules for real-time intrusion detection.',
-        techStack: ['/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'complaintclassifier',
-        title: 'AI COMPLAINT CLASSIFIER',
-        front: '/textures/gallery/youngmultiprzod.webp',
-        painted: '/textures/gallery/youngmultiprzod_painted.webp',
-        url: '#',
-        description: 'An NLP model for classifying issues with a React frontend and SQL optimizations.',
-        techStack: ['/textures/gallery/wordpresslogo.webp', '/textures/gallery/phplogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
-    },
-    {
-        id: 'aivideoeditor',
-        title: 'AI VIDEO EDITOR',
-        front: '/textures/gallery/monetuneprzod.webp',
-        painted: '/textures/gallery/monetuneprzod_painted.webp',
-        url: '#',
-        description: 'An AI-powered video editing platform that automatically converts long-form videos into engaging Shorts and Reels.',
-        techStack: ['/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
     }
 ];
 
