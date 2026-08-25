@@ -184,6 +184,37 @@ export default function CaseStudyModal({ projectId, onClose }) {
             <h1 id="cs-title" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', margin: 0, lineHeight: 1.1 }}>
               {project.title}
             </h1>
+            {project.liveUrl && (
+              <div style={{ marginTop: '16px' }}>
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    padding: '8px 18px',
+                    background: 'linear-gradient(135deg, #a855f7 0%, #6366f1 100%)',
+                    color: '#ffffff',
+                    borderRadius: 'var(--radius-sm)',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                    fontSize: '0.9rem',
+                    boxShadow: '0 4px 14px rgba(168, 85, 247, 0.4)',
+                    transition: 'transform 0.2s, box-shadow 0.2s'
+                  }}
+                  className="cs-live-btn"
+                >
+                  <span>Open Live Project</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            )}
           </div>
         </div>
 
@@ -241,6 +272,43 @@ export default function CaseStudyModal({ projectId, onClose }) {
               gap: '24px',
             }}
           >
+            {project.liveUrl && (
+              <div>
+                <h3 style={{ fontSize: '1.1rem', color: 'var(--text-primary)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                  Live Deployment
+                </h3>
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '8px',
+                    width: '100%',
+                    padding: '12px 20px',
+                    background: 'rgba(139, 92, 246, 0.15)',
+                    border: '1px solid var(--accent-secondary)',
+                    color: 'var(--text-primary)',
+                    borderRadius: 'var(--radius-sm)',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                    fontSize: '0.95rem',
+                    transition: 'background 0.2s, transform 0.2s'
+                  }}
+                  className="cs-live-sidebar-btn"
+                >
+                  <span>Visit Deployed Website</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            )}
+
             <div>
               <h3 style={{ fontSize: '1.1rem', color: 'var(--text-primary)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                 Key Technologies

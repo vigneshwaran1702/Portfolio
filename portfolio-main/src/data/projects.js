@@ -1,82 +1,87 @@
 export const projects = [
   {
+    id: "cloud-security-scanner",
+    title: "Cloud Security Scanner",
+    category: "Cloud Security / DevSecOps",
+    shortDescription: "An automated cloud security scanner that identifies misconfigurations, vulnerabilities, and compliance risks across AWS, Azure, and GCP.",
+    tags: ["React", "FastAPI", "Python", "Docker", "Cloud Security"],
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    liveUrl: "https://ai-cloud-security.vercel.app",
+    caseStudy: {
+      overview: "AI Cloud Security Scanner is a modern dashboard that automatically scans cloud environments to identify security vulnerabilities, misconfigurations, and compliance risks, helping organizations protect their cloud infrastructure.",
+      challenge: "Providing unified real-time visibility across multi-cloud environments (AWS, Azure, GCP) to remediate security risks before exploitation.",
+      approach: "Designed automated scanning pipelines with FastAPI backend, structured security policy checks, and a responsive frontend dashboard.",
+      solution: "Implemented comprehensive security misconfiguration detection, compliance scoring, and guided remediation workflows.",
+      technologies: ["React", "FastAPI", "Python", "Docker", "AWS/Azure/GCP", "REST API"],
+      outcome: "Successfully deployed and live, delivering instant risk assessment and clear actionable guidance for cloud security hardening."
+    }
+  },
+  {
+    id: "wildlife-news",
+    title: "Wildlife News (WildTN)",
+    category: "AI Intelligence / Environmental News",
+    shortDescription: "A Tamil Nadu Wildlife & Forest News Aggregator with automated news collection, AI classification, conflict level scoring, and PDF digests.",
+    tags: ["React", "FastAPI", "Python", "NLP", "ReportLab"],
+    image: "https://images.unsplash.com/photo-1547970810-dc1eac37d174?auto=format&fit=crop&w=800&q=80",
+    liveUrl: "https://tnwildlife-news.vercel.app/",
+    caseStudy: {
+      overview: "WildTN-News is a fullstack AI-powered news intelligence platform dedicated to aggregating, analyzing, and reporting wildlife news, human-animal conflict alerts, and forest department bulletins across Tamil Nadu.",
+      challenge: "Aggregating scattered Tamil and English environmental news in real-time and scoring human-wildlife conflict severity.",
+      approach: "Built automated web scrapers with 15-minute periodic scanning, NLP classification, and bilingual (Tamil/English) executive summaries.",
+      solution: "Developed an interactive intelligence analytics dashboard and automated PDF bulletin generator using ReportLab.",
+      technologies: ["React", "Vite", "FastAPI", "Python", "APScheduler", "ReportLab", "NLP"],
+      outcome: "Deployed live platform providing instant conflict severity tracking and downloadable executive wildlife bulletins."
+    }
+  },
+  {
+    id: "attendance-monitor",
+    title: "Attendance Monitor",
+    category: "Fullstack & Mobile / Biometrics",
+    shortDescription: "An automated attendance monitoring system to track employee login/logout times using fingerprint authentication and automated reporting.",
+    tags: ["FastAPI", "Python", "PostgreSQL", "Flutter", "Docker"],
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
+    liveUrl: "https://attendance-monitor-alpha.vercel.app/",
+    caseStudy: {
+      overview: "Developed an automated attendance system adopting Clean Architecture for the FastAPI backend, integrated with Flutter for cross-platform support and biometric fingerprint verification.",
+      challenge: "Eliminating time theft and manual attendance overhead while providing reliable hours calculation and automated reporting.",
+      approach: "Built clean layered architecture with repository patterns, JWT authentication, and automated daily/monthly report generation.",
+      solution: "Containerized with Docker and PostgreSQL, creating a secure, flexible, and maintainable biometric tracking platform.",
+      technologies: ["FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "Alembic", "Flutter", "Docker"],
+      outcome: "Delivered a live attendance monitoring prototype with automated time recording and reliable analytics."
+    }
+  },
+  {
+    id: "red-ball-game",
+    title: "Red Ball Game",
+    category: "Web Gaming / Interactive Physics",
+    shortDescription: "An interactive physics-based 2D platformer ball game with responsive mechanics, obstacle navigation, and smooth canvas graphics.",
+    tags: ["JavaScript", "HTML5 Canvas", "CSS3", "Physics Engine"],
+    image: "https://images.unsplash.com/photo-1612287233207-68b321550c60?auto=format&fit=crop&w=800&q=80",
+    liveUrl: "https://red-ball-game.vercel.app",
+    caseStudy: {
+      overview: "An engaging 2D platformer web game built from scratch using vanilla JavaScript and HTML5 Canvas with custom physics simulation and dynamic obstacle gameplay.",
+      challenge: "Building responsive physics, fluid collision detection, and smooth frame-rate controls without heavyweight game engines.",
+      approach: "Engineered custom velocity, friction, gravity, and particle systems optimized for desktop and mobile browsers.",
+      solution: "Crafted interactive level layouts, responsive touch/keyboard controls, sound effects, and scoring mechanisms.",
+      technologies: ["JavaScript ES6+", "HTML5 Canvas", "CSS3", "Game Physics", "Audio API"],
+      outcome: "Live and playable on Vercel, providing an addictive 60fps retro platformer experience across all screen sizes."
+    }
+  },
+  {
     id: "medai",
     title: "MED AI",
     category: "AI Chatbot / Healthcare",
-    shortDescription: "An AI-powered healthcare assistant that simplifies medical understanding through conversational interactions and intelligent document support.",
-    tags: ["LLMs", "NLP", "FastAPI", "Supabase"],
+    shortDescription: "An AI-powered healthcare assistant that simplifies medical understanding through conversational interactions, prescription analysis, and document support.",
+    tags: ["OpenAI GPT-4", "OpenCV", "FastAPI", "NLP", "Supabase"],
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+    liveUrl: "https://med-ai.vercel.app",
     caseStudy: {
-      overview: "MED AI is a multimodal healthcare assistant designed to understand medical reports, prescriptions, and patient questions with AI-driven support.",
-      challenge: "Making complex health-related information more accessible while keeping interactions secure and practical.",
-      approach: "Built a conversational interface powered by LLMs and NLP, combined with a fast backend and secure data handling.",
-      solution: "Integrated FastAPI and Supabase to support intelligent, user-friendly health assistance.",
-      technologies: ["LLMs", "NLP", "FastAPI", "Supabase", "Multimodal AI"],
-      outcome: "Created a more approachable healthcare support experience that helps users explore information quickly and clearly."
-    }
-  },
-  {
-    id: "twin-authentication",
-    title: "Twin Authentication for Voting System",
-    category: "Security / AI Systems",
-    shortDescription: "A secure e-voting system using dual biometric verification to strengthen identity protection and reduce impersonation risk.",
-    tags: ["Python", "OpenCV", "Raspberry Pi", "Security"],
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80",
-    caseStudy: {
-      overview: "Developed a secure voting system with dual biometric authentication using fingerprint and iris recognition.",
-      challenge: "Preventing impersonation and creating a tamper-resistant voting workflow.",
-      approach: "Combined computer vision, secure processing, and reliable hardware integration to build a dependable prototype.",
-      solution: "Implemented a layered authentication approach focused on security, reliability, and real-world deployment readiness.",
-      technologies: ["Python", "OpenCV", "Raspberry Pi", "Biometric Systems"],
-      outcome: "Delivered a strong security-focused prototype for smart and trustworthy identity verification."
-    }
-  },
-  {
-    id: "defence-radar-iot",
-    title: "Defence Radar-IoT Model",
-    category: "Embedded Systems / IoT",
-    shortDescription: "A smart surveillance prototype built with embedded hardware and IoT components for real-time monitoring.",
-    tags: ["Arduino", "IoT", "Sensors", "Hardware"],
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-    caseStudy: {
-      overview: "Engineered a smart monitoring system designed for intrusion detection and alert generation in simulated environments.",
-      challenge: "Creating a dependable low-cost sensing solution with quick response behavior.",
-      approach: "Used Arduino, ultrasonic sensors, and IoT modules to build the detection pipeline and alert flow.",
-      solution: "Implemented embedded logic and real-time event handling for practical monitoring scenarios.",
-      technologies: ["Arduino", "Ultrasonic Sensors", "IoT Modules", "C++"],
-      outcome: "Built a responsive prototype that demonstrates reliable sensing and alerting in real time."
-    }
-  },
-  {
-    id: "ai-complaint-classifier",
-    title: "AI Complaint Classifier",
-    category: "Machine Learning / NLP",
-    shortDescription: "An NLP-based system for classifying issues with a clean React interface and SQL-backed data flow.",
-    tags: ["NLP", "React", "SQL", "Machine Learning"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    caseStudy: {
-      overview: "Designed an NLP model to classify issues across multiple categories with strong accuracy and practical automation value.",
-      challenge: "Reducing manual triage work while maintaining fast and dependable processing.",
-      approach: "Developed the classifier with a responsive React frontend and optimized SQL queries for efficient handling.",
-      solution: "Applied structured data and intelligent classification to create a more effective issue-handling workflow.",
-      technologies: ["NLP", "React", "SQL", "Database Optimization"],
-      outcome: "Improved workflow efficiency and reduced manual effort through a more intelligent triage process."
-    }
-  },
-  {
-    id: "ai-video-editor",
-    title: "AI Video Editor",
-    category: "Generative AI / Media",
-    shortDescription: "An AI-assisted video editing workflow that turns long-form content into engaging short-form clips.",
-    tags: ["AI", "FastAPI", "Video Processing", "Python"],
-    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80",
-    caseStudy: {
-      overview: "Built an AI-driven media workflow that transforms long-form videos into social-ready short clips with automation.",
-      challenge: "Automating scene detection, trimming, and content adaptation for different platforms.",
-      approach: "Used FastAPI and processing pipelines to create a scalable backend for editing and export tasks.",
-      solution: "Implemented intelligent media processing to make content repurposing faster and simpler.",
-      technologies: ["FastAPI", "Python", "Video Processing", "AI Tools"],
-      outcome: "Enabled a faster and more scalable path from long-form content to polished short-form output."
+      overview: "MED AI is an intelligent healthcare assistant designed to help users understand symptoms, analyze medical prescriptions, and answer health questions with AI-driven support.",
+      challenge: "Making complex medical information accessible and understandable while ensuring safe and accurate guidance.",
+      approach: "Integrated OpenAI Vision APIs with OpenCV image preprocessing to decode prescription photos and medical documents.",
+      solution: "Built a conversational assistant with structured medical Q&A, token-optimized responses, and safety disclaimers.",
+      technologies: ["OpenAI API", "OpenCV (cv2)", "FastAPI", "Python", "NLP", "Supabase"],
+      outcome: "Deployed live assistant offering approachable healthcare exploration and intelligent document support."
     }
   }
 ];

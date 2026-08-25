@@ -158,19 +158,39 @@ export default function ProjectCard({ project }) {
         }}
       >
         <div>
-          <span 
-            style={{ 
-              fontSize: '0.8rem', 
-              color: 'var(--accent-secondary)', 
-              textTransform: 'uppercase', 
-              fontWeight: 600, 
-              letterSpacing: '1px',
-              display: 'block',
-              marginBottom: '6px'
-            }}
-          >
-            {project.category}
-          </span>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+            <span 
+              style={{ 
+                fontSize: '0.8rem', 
+                color: 'var(--accent-secondary)', 
+                textTransform: 'uppercase', 
+                fontWeight: 600, 
+                letterSpacing: '1px',
+                display: 'block'
+              }}
+            >
+              {project.category}
+            </span>
+            {project.liveUrl && (
+              <span 
+                style={{ 
+                  display: 'inline-flex', 
+                  alignItems: 'center', 
+                  gap: '4px',
+                  fontSize: '0.72rem',
+                  color: '#4ade80',
+                  background: 'rgba(74, 222, 128, 0.1)',
+                  padding: '2px 8px',
+                  borderRadius: '9999px',
+                  border: '1px solid rgba(74, 222, 128, 0.25)',
+                  fontWeight: 500
+                }}
+              >
+                <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#4ade80', display: 'inline-block' }} />
+                Live Deployed
+              </span>
+            )}
+          </div>
           <h3 style={{ fontSize: '1.4rem', fontWeight: 500, margin: '0 0 10px', color: 'var(--text-primary)' }}>
             {project.title}
           </h3>
