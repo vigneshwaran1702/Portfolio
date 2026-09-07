@@ -42,7 +42,7 @@ const FALLBACK_PROJECTS = [
         painted: '/textures/gallery/timberkittyprzod_painted.webp',
         url: 'https://ai-cloud-security.vercel.app',
         description: 'An automated cloud security scanner that detects misconfigurations, vulnerabilities, and compliance risks across AWS, Azure, and GCP.',
-        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/tailwindlogo.webp', '/textures/gallery/jslogo.webp']
+        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/tailwindlogo.webp', '/textures/gallery/jslogo.webp', '/textures/gallery/csslogo.webp']
     },
     {
         id: 'wildlifenews',
@@ -60,7 +60,7 @@ const FALLBACK_PROJECTS = [
         painted: '/textures/gallery/bioprzod_painted.webp',
         url: 'https://attendance-monitor-alpha.vercel.app/',
         description: 'An automated attendance monitoring system with biometric fingerprint tracking, working hours calculation, and report generation.',
-        techStack: ['/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
+        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
     },
     {
         id: 'redballgame',
@@ -69,7 +69,7 @@ const FALLBACK_PROJECTS = [
         painted: '/textures/gallery/youngmultiprzod_painted.webp',
         url: 'https://red-ball-game.vercel.app',
         description: 'An interactive physics-based 2D platformer ball game featuring custom physics, mechanics, obstacle navigation, and responsive controls.',
-        techStack: ['/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
+        techStack: ['/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp', '/textures/gallery/tailwindlogo.webp']
     },
     {
         id: 'medai',
@@ -78,7 +78,7 @@ const FALLBACK_PROJECTS = [
         painted: '/textures/gallery/timberkittyprzod_painted.webp',
         url: 'https://med-ai.vercel.app',
         description: 'An AI-powered healthcare assistant that simplifies medical understanding through conversational interactions, prescription analysis, and document support.',
-        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
+        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp']
     }
 ];
 
@@ -1266,10 +1266,9 @@ const ProjectCard = memo(forwardRef(({ index, project, clothespinTexture, curren
                     {/* Kontener na loga układane poziomo */}
                     <group position={[0, -0.05, 0.01]}>
                         {project.techStack && project.techStack.map((logoPath, idx) => {
-                            // Rozstawienie kwadracików (4 sztuki wyśrodkowane)
-                            const spacing = 0.30;
-                            const startX = -((project.techStack.length - 1) * spacing) / 2;
-                            const xPos = startX + (idx * spacing);
+                            // The 4 drawn square boxes on the card texture are at fixed centers: [-0.45, -0.15, 0.15, 0.45]
+                            const BOX_POSITIONS = [-0.45, -0.15, 0.15, 0.45];
+                            const xPos = BOX_POSITIONS[idx] !== undefined ? BOX_POSITIONS[idx] : (-0.45 + idx * 0.30);
 
                             return (
                                 <TechStackLogo key={idx} path={logoPath} position={[xPos, 0, 0]} />
