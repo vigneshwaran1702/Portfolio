@@ -75,10 +75,23 @@ export default function Navigation() {
               color: 'var(--text-primary)',
               display: 'flex',
               alignItems: 'center',
-              gap: '6px'
+              gap: '10px',
+              textDecoration: 'none'
             }}
           >
-            <span style={{ color: 'var(--accent-secondary)' }}>V.</span>IGNESHWARAN
+            <img
+              src="/favico.png"
+              alt="Vigneshwaran Logo"
+              style={{
+                width: '36px',
+                height: '36px',
+                borderRadius: '50%',
+                objectFit: 'cover',
+                border: '2px solid var(--accent-secondary, #a855f7)',
+                boxShadow: '0 0 10px rgba(168, 85, 247, 0.3)'
+              }}
+            />
+            <span><span style={{ color: 'var(--accent-secondary)' }}>V.</span>IGNESHWARAN</span>
           </a>
 
           {/* Desktop Navigation Links */}

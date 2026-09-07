@@ -433,12 +433,13 @@ const AWARDS_DATA = {
     sotd: {
         id: 'award-sotd',
         layout: 'certificate_grid',
-        title: 'Web Development Capabilities',
+        title: 'Developer & Code Repositories',
+        url: 'https://github.com/vigneshwaran1702',
         items: [
-            { label: 'Custom Frontends (React / Vite)', date: '2026', image: '/textures/about/button.webp', url: '#' },
-            { label: 'WordPress Custom Gutenberg Blocks', date: '2026', image: '/textures/about/button.webp', url: '#' },
-            { label: 'High Performance Web Apps', date: '2025', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Responsive Mobile-First Interfaces', date: 'Active', image: '/textures/about/button.webp', url: '#' }
+            { label: 'GitHub Profile & Repositories', date: 'vigneshwaran1702', image: '/textures/about/button.webp', url: 'https://github.com/vigneshwaran1702' },
+            { label: 'Custom Frontends & Web Apps', date: 'React / Vite', image: '/textures/about/button.webp', url: 'https://github.com/vigneshwaran1702' },
+            { label: 'AI & Data Engineering Projects', date: 'Python / ML', image: '/textures/about/button.webp', url: 'https://github.com/vigneshwaran1702' },
+            { label: 'High Performance Web Applications', date: 'Active', image: '/textures/about/button.webp', url: 'https://github.com/vigneshwaran1702' }
         ],
         platformConfig: {
             label: 'DEVELOPER',
@@ -449,27 +450,27 @@ const AWARDS_DATA = {
     sotm: {
         id: 'award-sotm',
         layout: 'certificate_grid',
-        title: 'Hackathons & Growth',
+        title: 'Hackathons & Competitions',
         items: [
-            { label: 'Hackathon Participation', date: '2026', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Problem Solving', date: '2025', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Team Collaboration', date: '2026', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Rapid Prototyping', date: 'Active', image: '/textures/about/button.webp', url: '#' }
+            { label: 'First prize in college hackathon for my IOT based Radar system', date: '1st Prize Winner', image: '/textures/about/button.webp', url: '#' },
+            { label: 'IoT-Based Radar System Design', date: 'Hardware & IoT', image: '/textures/about/button.webp', url: '#' },
+            { label: 'Rapid Prototyping & Problem Solving', date: 'Active', image: '/textures/about/button.webp', url: '#' },
+            { label: 'Team Collaboration & Innovation', date: '2026', image: '/textures/about/button.webp', url: '#' }
         ],
         platformConfig: {
-            label: 'EXPERT',
+            label: 'HACKATHONS',
             color: '#311059',
-            icon: '📈'
+            icon: '🏆'
         }
     },
     other: {
         id: 'award-other',
         layout: 'certificate_grid',
-        title: 'Content Creation & Editing',
+        title: 'Content Creator & Media',
         items: [
-            { label: 'Video Editing & Production', date: '2026', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Social Media Campaign Strategies', date: '2025', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Audience Growth Consulting', date: '2026', image: '/textures/about/button.webp', url: '#' }
+            { label: 'Created and Maintaining a meme page with 2k followers', date: '2k+ Followers', image: '/textures/about/button.webp', url: '#' },
+            { label: 'Digital Content Creation & Engagement', date: 'Active', image: '/textures/about/button.webp', url: '#' },
+            { label: 'Social Media Growth & Audience Strategy', date: 'Active', image: '/textures/about/button.webp', url: '#' }
         ],
         platformConfig: {
             label: 'CREATOR',
@@ -687,13 +688,15 @@ const AwardsMilestone = ({ z, scrollProgressRef }) => {
                 {/* CAPACITY SUBTITLE */}
                 <Text
                     position={[0, 0.1, 0.01]}
-                    fontSize={0.2}
+                    fontSize={0.16}
                     color="#311059"
                     anchorX="center"
                     anchorY="middle"
                     font="/fonts/CabinSketch-Regular.ttf"
+                    maxWidth={2.2}
+                    textAlign="center"
                 >
-                    React & Frontends
+                    github.com/vigneshwaran1702
                 </Text>
             </group>
 
@@ -748,13 +751,15 @@ const AwardsMilestone = ({ z, scrollProgressRef }) => {
                 {/* CAPACITY SUBTITLE */}
                 <Text
                     position={[0, 0.1, 0.01]}
-                    fontSize={0.2}
+                    fontSize={0.15}
                     color="#311059"
                     anchorX="center"
                     anchorY="middle"
                     font="/fonts/CabinSketch-Regular.ttf"
+                    maxWidth={2.2}
+                    textAlign="center"
                 >
-                    Build & Learn Fast
+                    1st Prize: IoT Radar System
                 </Text>
             </group>
 
@@ -808,13 +813,15 @@ const AwardsMilestone = ({ z, scrollProgressRef }) => {
                 {/* CAPACITY SUBTITLE */}
                 <Text
                     position={[0, 0.1, 0.01]}
-                    fontSize={0.2}
+                    fontSize={0.14}
                     color="#311059"
                     anchorX="center"
                     anchorY="middle"
                     font="/fonts/CabinSketch-Regular.ttf"
+                    maxWidth={2.2}
+                    textAlign="center"
                 >
-                    Video & Media
+                    Meme Page (2k Followers)
                 </Text>
             </group>
         </group>

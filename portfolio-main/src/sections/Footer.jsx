@@ -41,18 +41,30 @@ export default function Footer() {
           className="footer-top-row"
         >
           {/* Logo and positioning */}
-          <div style={{ textAlign: 'center' }}>
+          <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
+            <img
+              src="/favico.png"
+              alt="Vigneshwaran Logo"
+              style={{
+                width: '44px',
+                height: '44px',
+                borderRadius: '50%',
+                objectFit: 'cover',
+                border: '2px solid var(--accent-secondary, #a855f7)',
+                boxShadow: '0 0 12px rgba(168, 85, 247, 0.3)'
+              }}
+            />
             <h3
               style={{
                 fontFamily: 'var(--font-heading)',
                 fontSize: '1.25rem',
                 fontWeight: 700,
                 color: 'var(--text-primary)',
-                margin: '0 0 6px',
+                margin: '0',
                 letterSpacing: '1px'
               }}
             >
-              VINESHWARAN
+              VIGNESHWARAN
             </h3>
             <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', margin: 0, letterSpacing: '0.5px', textTransform: 'uppercase' }}>
               AI & ML Engineer &bull; Data Analyst &bull; Web Developer
