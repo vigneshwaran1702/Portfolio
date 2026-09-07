@@ -433,13 +433,15 @@ const AWARDS_DATA = {
     sotd: {
         id: 'award-sotd',
         layout: 'certificate_grid',
-        title: 'Developer & Code Repositories',
+        title: 'DEVELOPER',
         url: 'https://github.com/vigneshwaran1702',
         items: [
-            { label: 'GitHub Profile & Repositories', date: 'vigneshwaran1702', image: '/textures/about/button.webp', url: 'https://github.com/vigneshwaran1702' },
-            { label: 'Custom Frontends & Web Apps', date: 'React / Vite', image: '/textures/about/button.webp', url: 'https://github.com/vigneshwaran1702' },
-            { label: 'AI & Data Engineering Projects', date: 'Python / ML', image: '/textures/about/button.webp', url: 'https://github.com/vigneshwaran1702' },
-            { label: 'High Performance Web Applications', date: 'Active', image: '/textures/about/button.webp', url: 'https://github.com/vigneshwaran1702' }
+            {
+                label: 'GitHub Profile & Code Repositories',
+                description: 'https://github.com/vigneshwaran1702',
+                badge: 'GitHub Profile',
+                url: 'https://github.com/vigneshwaran1702'
+            }
         ],
         platformConfig: {
             label: 'DEVELOPER',
@@ -450,12 +452,13 @@ const AWARDS_DATA = {
     sotm: {
         id: 'award-sotm',
         layout: 'certificate_grid',
-        title: 'Hackathons & Competitions',
+        title: 'HACKATHONS',
         items: [
-            { label: 'First prize in college hackathon for my IOT based Radar system', date: '1st Prize Winner', image: '/textures/about/button.webp', url: '#' },
-            { label: 'IoT-Based Radar System Design', date: 'Hardware & IoT', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Rapid Prototyping & Problem Solving', date: 'Active', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Team Collaboration & Innovation', date: '2026', image: '/textures/about/button.webp', url: '#' }
+            {
+                label: 'College Hackathon Achievement',
+                description: 'First prize in college hackathon for my IOT based Radar system',
+                badge: '1st Prize Winner'
+            }
         ],
         platformConfig: {
             label: 'HACKATHONS',
@@ -466,11 +469,13 @@ const AWARDS_DATA = {
     other: {
         id: 'award-other',
         layout: 'certificate_grid',
-        title: 'Content Creator & Media',
+        title: 'CREATOR',
         items: [
-            { label: 'Created and Maintaining a meme page with 2k followers', date: '2k+ Followers', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Digital Content Creation & Engagement', date: 'Active', image: '/textures/about/button.webp', url: '#' },
-            { label: 'Social Media Growth & Audience Strategy', date: 'Active', image: '/textures/about/button.webp', url: '#' }
+            {
+                label: 'Meme Page Growth & Management',
+                description: 'Created and Maintaining a meme page with 2k followers',
+                badge: '2k Followers'
+            }
         ],
         platformConfig: {
             label: 'CREATOR',
