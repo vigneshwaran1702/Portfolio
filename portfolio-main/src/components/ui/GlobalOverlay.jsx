@@ -377,19 +377,21 @@ const ContentCard = ({ content, isOpen, onClose, isMobile }) => {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                             <span style={{
                                 textTransform: 'uppercase',
-                                fontSize: '0.7rem',
+                                fontSize: '0.8rem',
                                 fontWeight: 700,
-                                letterSpacing: '1px',
-                                color: '#666'
+                                letterSpacing: '1.5px',
+                                color: '#311059',
+                                opacity: 0.8
                             }}>
                                 {label}
                             </span>
                             <h2 style={{
-                                fontSize: '1.8rem',
+                                fontSize: '2rem',
                                 margin: 0,
                                 lineHeight: 1.1,
                                 fontWeight: 800,
-                                fontFamily: "'Rubik Scribble', cursive", // Clean, bold
+                                color: '#311059',
+                                fontFamily: "'Rubik Scribble', cursive, sans-serif",
                             }}>
                                 {content.title}
                             </h2>
@@ -408,70 +410,98 @@ const ContentCard = ({ content, isOpen, onClose, isMobile }) => {
 
                     {/* === LAYOUT: CERTIFICATE GRID === */}
                     {content.layout === 'certificate_grid' ? (
-                        <div style={{ position: 'relative', flex: 1, minHeight: 0 }}>
+                        <div style={{ position: 'relative', flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                             <div
                                 ref={scrollContainerRef}
                                 className="awards-scroll-container"
                                 style={{
-                                    display: 'grid',
-                                    gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fill, minmax(280px, 1fr))',
-                                    alignContent: 'start',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
                                     height: '100%',
                                     overflowY: 'auto',
                                     overflowX: 'hidden',
-                                    gap: isMobile ? '1rem' : '2rem',
-                                    padding: isMobile ? '1rem 0.5rem 2rem 0.5rem' : '1rem 2rem 2rem 1rem',
+                                    gap: '1.5rem',
+                                    padding: isMobile ? '1rem 0.5rem 2rem 0.5rem' : '1.5rem 2rem 2rem 1rem',
                                     ...getStaggerStyle(200)
                                 }}>
                                 {content.items?.map((item, index) => (
                                     <div key={index} style={{
                                         display: 'flex',
                                         flexDirection: 'column',
-                                        gap: '0.8rem',
-                                        backgroundColor: '#f9f9f9',
-                                        padding: '1rem',
-                                        border: '2px solid #1a1a1a',
-                                        boxShadow: '4px 4px 0px rgba(0,0,0,0.1)',
-                                        transition: 'transform 0.2s',
-                                        cursor: 'pointer',
-                                        borderRadius: '2px 255px 3px 255px / 255px 5px 225px 3px'
-                                    }}
-                                        onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
-                                        onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
-                                        onClick={() => window.open(item.url || content.url || '#', '_blank')}
-                                    >
-                                        <div style={{
-                                            position: 'relative',
-                                            width: '100%',
-                                            paddingBottom: '141%', // A4 Portrait ratio
-                                            backgroundColor: '#eee',
-                                            border: '2px solid #1a1a1a',
-                                            overflow: 'hidden',
-                                            borderRadius: '2px 255px 3px 255px / 255px 5px 225px 3px'
-                                        }}>
-                                            <img
-                                                src={item.image || 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='}
-                                                alt={item.label}
-                                                loading="lazy"
-                                                decoding="async"
-                                                style={{
-                                                    position: 'absolute',
-                                                    top: 0,
-                                                    left: 0,
-                                                    width: '100%',
-                                                    height: '100%',
-                                                    objectFit: 'fill'
-                                                }}
-                                            />
-                                        </div>
-                                        <div style={{ textAlign: 'center' }}>
-                                            <h4 style={{ margin: '0 0 0.4rem 0', fontSize: '1.2rem', fontWeight: 700, fontFamily: "'Rubik Scribble', cursive" }}>
-                                                {item.label}
-                                            </h4>
-                                            <span style={{ fontSize: '1.1rem', color: '#4a4a4a', fontFamily: "'Cabin Sketch', cursive", fontWeight: 700 }}>
-                                                {item.date}
+                                        alignItems: 'center',
+                                        textAlign: 'center',
+                                        gap: '1rem',
+                                        backgroundColor: '#ffffff',
+                                        padding: isMobile ? '1.5rem 1rem' : '2.5rem 2rem',
+                                        border: '2px solid #311059',
+                                        boxShadow: '6px 6px 0px rgba(49, 16, 89, 0.15)',
+                                        transition: 'transform 0.2s, box-shadow 0.2s',
+                                        borderRadius: '16px',
+                                        width: '100%',
+                                        maxWidth: '520px',
+                                    }}>
+                                        {item.badge && (
+                                            <span style={{
+                                                display: 'inline-block',
+                                                padding: '4px 14px',
+                                                background: '#311059',
+                                                color: '#fdf8e2',
+                                                borderRadius: '20px',
+                                                fontSize: '0.85rem',
+                                                fontWeight: 700,
+                                                letterSpacing: '1px',
+                                                textTransform: 'uppercase',
+                                                fontFamily: 'var(--font-sans, sans-serif)'
+                                            }}>
+                                                {item.badge}
                                             </span>
-                                        </div>
+                                        )}
+
+                                        <p style={{
+                                            margin: '0.2rem 0',
+                                            fontSize: isMobile ? '1.25rem' : '1.5rem',
+                                            fontWeight: 700,
+                                            color: '#311059',
+                                            lineHeight: 1.4,
+                                            fontFamily: "'Cabin Sketch', cursive, sans-serif"
+                                        }}>
+                                            {item.description || item.label}
+                                        </p>
+
+                                        {item.url && (
+                                            <a
+                                                href={item.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                style={{
+                                                    display: 'inline-flex',
+                                                    alignItems: 'center',
+                                                    gap: '8px',
+                                                    padding: '12px 24px',
+                                                    backgroundColor: '#311059',
+                                                    color: '#fdf8e2',
+                                                    borderRadius: '8px',
+                                                    textDecoration: 'none',
+                                                    fontWeight: 700,
+                                                    fontSize: '1rem',
+                                                    fontFamily: 'var(--font-heading, sans-serif)',
+                                                    marginTop: '0.5rem',
+                                                    boxShadow: '0 4px 12px rgba(49, 16, 89, 0.2)',
+                                                    transition: 'transform 0.2s'
+                                                }}
+                                                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.04)'}
+                                                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                                            >
+                                                <span>Visit GitHub Profile</span>
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                                </svg>
+                                            </a>
+                                        )}
                                     </div>
                                 ))}
                             </div>
