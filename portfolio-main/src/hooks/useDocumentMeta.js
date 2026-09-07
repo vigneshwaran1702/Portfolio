@@ -8,27 +8,27 @@ import { useScene } from '../context/SceneContext';
 const ROOM_META = {
     null: {
         path: '/',
-        title: 'Vigneshwaran | AI Engineer & Data Analyst Portfolio',
+        title: 'Vigneshwaran',
         description: 'Portfolio of Vigneshwaran, an AI & ML engineer, data analyst, and web developer building intelligent products and modern digital experiences.',
     },
     about: {
         path: '/about',
-        title: 'About Me — Vigneshwaran Portfolio',
+        title: 'Vigneshwaran',
         description: 'Learn about Vigneshwaran — an AI & ML engineer and data analyst focused on practical, scalable solutions.',
     },
     gallery: {
         path: '/gallery',
-        title: 'Projects — Vigneshwaran Portfolio',
+        title: 'Vigneshwaran',
         description: 'Browse the projects and applications built by Vigneshwaran across AI, analytics, and web development.',
     },
     studio: {
         path: '/studio',
-        title: 'Skills — Vigneshwaran Portfolio',
+        title: 'Vigneshwaran',
         description: 'Explore the technical stack and capabilities behind Vigneshwaran’s AI, analytics, and web development work.',
     },
     contact: {
         path: '/contact',
-        title: 'Contact — Vigneshwaran Portfolio',
+        title: 'Vigneshwaran',
         description: 'Get in touch with Vigneshwaran for collaborations, freelance work, or project discussions.',
     },
 };

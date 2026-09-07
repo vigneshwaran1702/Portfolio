@@ -8,8 +8,8 @@ export const journeyData = [
   {
     phase: "EXPERIENCE",
     title: "Internships & Hackathons",
-    period: "Internships",
-    description: "Gained hands-on experience through internships in AI, machine learning, and analytics while also participating in hackathons to build practical solutions."
+    period: "1st Prize Winner",
+    description: "Won 1st prize in college hackathon for building an IoT-based Radar system. Gained hands-on experience through internships in AI, machine learning, and analytics while actively building practical solutions."
   },
   {
     phase: "CERTIFICATION",
